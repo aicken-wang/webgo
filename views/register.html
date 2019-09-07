@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎注册</title>
+</head>
+<style>
+    .title{
+        color: #000;
+        font-size: 2.0rem;
+        text-align: center;
+    }
+</style>
+<body>
+<p class="title"> {{.title}}</p>
+
+<form action="/register" method="post">
+    <div>
+        用户名：<input type="text" name="username">
+    </div>
+    <div>
+        密码：<input type="password" name="password">
+    </div>
+    <div>
+        <input type="submit" value="注册">
+        <input type="button" value="登录">
+    </div>
+    <h1 style ="color: red;">{{.errMsg}}</h1>
+</form>
+</body>
+</html>
